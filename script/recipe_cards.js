@@ -2,7 +2,7 @@ let cards = [];
 let i = 0;
 
 function getRecipeTagsFromDB(recipe_id) {
-    fetch('https://titepoule.herokuapp.com/recipe_book/services/recipe_handler/tags/' + recipe_id, {
+    fetch(' https://tite-poule-recipe-book.herokuapp.com/recipe_book/services/recipe_handler/tags/' + recipe_id, {
         method: "GET", headers: {
             'Accept': 'application/json'
         }
@@ -30,7 +30,7 @@ function createTagItem(tag, recipe_id) {
 
 function getFeaturedRecipesFromDB() {
 
-    fetch('https://titepoule.herokuapp.com/recipe_book/services/recipe_handler/recipes', {
+    fetch(' https://tite-poule-recipe-book.herokuapp.com/recipe_book/services/recipe_handler/recipes', {
         method: "GET", headers: {
             'Accept': 'application/json',
        //     'Access-Control-Allow-Origin': '*',
@@ -58,7 +58,7 @@ function getRecipeFromDB(input) {
 
     console.log(input);
 
-    fetch('https://titepoule.herokuapp.com/recipe_book/services/recipe_handler/recipes' + input, {
+    fetch(' https://tite-poule-recipe-book.herokuapp.com/recipe_book/services/recipe_handler/recipes' + input, {
         method: "GET", headers: {
             'Accept': 'application/json'
         }
