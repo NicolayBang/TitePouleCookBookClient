@@ -1,5 +1,5 @@
 function getIngredientsFromDB(recipe_id) {
-    fetch('http://localhost:8080/recipe_book/services/recipe_handler/ingredients/' + recipe_id, {
+    fetch('https://tite-poule-recipe-book.herokuapp.com/recipe_book/services/recipe_handler/ingredients/' + recipe_id, {
         method: "GET", headers: {
             'Accept': 'application/json'
         }
