@@ -90,7 +90,7 @@ function sendCard(card) {
 
         cards[i] = card;
 
-        const name = card ['recipe'][0].name
+        const name = card ['recipe'][0].title
         const posted_by = " " + card ['recipe'][0].posted_by;//THIS IS HOW TO ACCESS THE JSON
         const creation_date = " " + card ['recipe'][0].creation_date;
         const difficulty = " " + card['recipe'][0].difficulty;
