@@ -23,7 +23,7 @@ var values = [];
 
 document.addEventListener("DOMContentLoaded", function (event) {
 
-
+    addRecipeForm();
     showTab(currentTab);
 
 });
