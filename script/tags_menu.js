@@ -2,7 +2,8 @@ function getTagsFromDB() {
     tags_results = document.querySelector('#checkBoxItems');
     fetch('https://tite-poule-recipe-book.herokuapp.com/recipe_book/services/recipe_handler/tags', {
         method: "GET", headers: {
-            'Accept': 'application/json'
+            'Accept': 'application/json',
+            'Connection': 'close'
         }
     })
         .then(response => response.json())

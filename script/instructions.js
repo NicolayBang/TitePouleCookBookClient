@@ -1,14 +1,12 @@
 function getInstructionsFromDB(recipe_id) {
     fetch('https://tite-poule-recipe-book.herokuapp.com/recipe_book/services/recipe_handler/instructions/' + recipe_id, {
         method: "GET", headers: {
-            'Accept': 'application/json'
+            'Accept': 'application/json',
+            'Connection': 'close'
         }
     })
         .then(response => response.json())
         .then(function (json) {
-            const json_data = json['instructions'][0];
-            const test = null;
-
             for (let i = 0; i < json['instructions'].length; i++) {
 
                 createInstructionItem(json['instructions'][i], recipe_id);

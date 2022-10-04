@@ -1,7 +1,8 @@
 function getIngredientsFromDB(recipe_id) {
     fetch('https://tite-poule-recipe-book.herokuapp.com/recipe_book/services/recipe_handler/ingredients/' + recipe_id, {
         method: "GET", headers: {
-            'Accept': 'application/json'
+            'Accept': 'application/json',
+            'Connection': 'close'
         }
     })
         .then(response => response.json())
@@ -27,5 +28,4 @@ function createIngredientItem(ingredient, recipe_id) {
 
     ingredients_results.append(div);
 }
-
 

@@ -2,9 +2,10 @@ let cards = [];
 let i = 0;
 
 function getRecipeTagsFromDB(recipe_id) {
-    fetch(' https://tite-poule-recipe-book.herokuapp.com/recipe_book/services/recipe_handler/tags/' + recipe_id, {
+    fetch('https://tite-poule-recipe-book.herokuapp.com/recipe_book/services/recipe_handler/tags/' + recipe_id, {
         method: "GET", headers: {
-            'Accept': 'application/json'
+            'Accept': 'application/json',
+            'Connection': 'close'
         }
     })
         .then(response => response.json())
@@ -30,12 +31,13 @@ function createTagItem(tag, recipe_id) {
 
 function getFeaturedRecipesFromDB() {
 
-    fetch(' https://tite-poule-recipe-book.herokuapp.com/recipe_book/services/recipe_handler/recipes', {
+    fetch('https://tite-poule-recipe-book.herokuapp.com/recipe_book/services/recipe_handler/recipes', {
         method: "GET", headers: {
             'Accept': 'application/json',
-       //     'Access-Control-Allow-Origin': '*',
-           // 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-          //  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+            'Connection': 'close',
+            //     'Access-Control-Allow-Origin': '*',
+            // 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+            //  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
             'Origin' : '*'
             // 'Access-Control-Allow-Headers': 'Content-Type, Accept, X-Requested-With, remember-me'
 
@@ -58,9 +60,10 @@ function getRecipeFromDB(input) {
 
     console.log(input);
 
-    fetch(' https://tite-poule-recipe-book.herokuapp.com/recipe_book/services/recipe_handler/recipes' + input, {
+    fetch('https://tite-poule-recipe-book.herokuapp.com/recipe_book/services/recipe_handler/recipes' + input, {
         method: "GET", headers: {
-            'Accept': 'application/json'
+            'Accept': 'application/json',
+            'Connection': 'close'
         }
     })
         .then(response => response.json())
@@ -87,7 +90,7 @@ function sendCard(card) {
 
         cards[i] = card;
 
-        const title = card ['recipe'][0].title
+        const name = card ['recipe'][0].name
         const posted_by = " " + card ['recipe'][0].posted_by;//THIS IS HOW TO ACCESS THE JSON
         const creation_date = " " + card ['recipe'][0].creation_date;
         const difficulty = " " + card['recipe'][0].difficulty;
@@ -98,7 +101,7 @@ function sendCard(card) {
         const recipe_id = " " + card['recipe'][0].recipe_id
 
 
-        parseCard(title, posted_by, creation_date, difficulty, cook_time, servings, popularity, description, recipe_id);
+        parseCard(name, posted_by, creation_date, difficulty, cook_time, servings, popularity, description, recipe_id);
 
     } catch (err) {
 

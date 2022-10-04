@@ -65,9 +65,10 @@ function queryDB(queryParam, querySelector, columnName, elementType, elementClas
 
     console.log("queryDB");
     var query_results = document.querySelector(querySelector);
-    fetch('http://localhost:8080/recipe_book/services/recipe_handler' + queryParam, {
+    fetch('https://tite-poule-recipe-book.herokuapp.com/recipe_book/services/recipe_handler' + queryParam, {
         method: "GET", headers: {
-            'Accept': 'application/json'
+            'Accept': 'application/json',
+            'Connection': 'close'
         }
     })
         .then(response => response.json())
