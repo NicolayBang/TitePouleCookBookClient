@@ -73,15 +73,15 @@ function queryDB(queryParam, querySelector, columnName, elementType, elementClas
         .then(response => response.json())
         .then(function (json) {
             console.log(json);
-            if (queryParam.includes('cooking')) {
-            //    let i=1;
+            if (queryParam.includes('cooking')) {//TODO find a better way to do this extremely costly and inefficient way as it is now
                 for (const [key, value] of Object.entries(json [columnName])) {
                     console.log(`${key} = ${value}`);
                     prep_times_map.set(key, value);
-                  //  console.log('*&*&'+prep_times_map.get(key));
+                    values.push(value);
+                }
+                var sortedbyValue = new Map([...prep_times_map].sort((a, b) => a[1] - b[1])); //sortHashMapByValue();
+                for (const [key] of sortedbyValue) {
                     appendResults(key, elementType, elementClass, elementName, boostrapType, query_results, elemIndex);
-                    //TODO APPEND IN ASCENDING ORDER WITH HASHMAP
-                 //   i++;
                 }
             } else if (queryParam.includes('/units')) {//If the query is for units, then
                 unitJson = json;

@@ -16,6 +16,7 @@ var submitClicks = 0;
 var postJson = [];
 let cookingTimesWasFetched = false;
 let unitsWasFetched = false;
+var values = [];
 
 
 // import {nextOnClickListener, submitOnClickListener, addIngredientOnClickListener} from 'ingredient_form.js';
@@ -171,61 +172,6 @@ function removeDoubleQuotes(str) {
 //TODO change hard coded tags to receive data from form
 function parseToJson(){
     console.log("HASHMAP "+prep_times_map.size);
-    /**
-     * Change the json to fit this format: {
-     *   "title": "Bannana Pudding",
-     *   "user_id":"1",
-     *   "nb_of_servings" : "1",
-     *   "difficulty_id": "1",
-     *   "prep_time_id" : "1",
-     *   "description" : "A banna pudding recipe. Delicious!",
-     *   "tags" : ["American" , "Dessert"],
-     *   "ingredients" : [{
-     *       "ingredient" : {
-     *           "name" : "Bannana",
-     *           "amount" : "4",
-     *           "unit" : "null"
-     *
-     *         }
-     *
-     *   },
-     *    { "ingredient" : {
-     *           "name" : "Cream",
-     *            "amount" : "1",
-     *            "unit" : "Cup"
-     *
-     *          }
-     *
-     *   }
-     *
-     *   ],
-     *     "instructions" : [{
-     *       "instruction" : {
-     *           "name" : "Place ingredients in blender"
-     *
-     *
-     *         }
-     *
-     *   },
-     *    {  "instruction" : {
-     *           "name" : "Blen ingredients "
-     *         }
-     *
-     *
-     *   },
-     *   {  "instruction" : {
-     *           "name" : "Cook for 20 minutes in the oven at 400F "
-     *
-     *         }
-     *
-     *
-     *   }
-     *
-     *   ]
-     *
-     *
-     * }
-     * */
     let prep_time_id = prep_times_map.get(prep_time);
     var json = {
         "title": title,
@@ -259,44 +205,3 @@ function parseToJson(){
     return json;
 }
 
-    // var json = {
-    //     "title": title,
-    //     "description": description,
-    //     "difficulty_id": difficulty,
-    //     "tags": [//CHANGE TO GET DATA FROM FORM
-    //         "American",
-    //         "Dessert"
-    //     ],
-    //     "nb_of_servings": servings,
-    //     "prep_time_id": prep_times_map.get(prep_time.toString()),// prep_time,
-    //     "ingredients": {
-    //         "name": recipe_name,
-    //         "amount": amount,
-    //         "unit": unit
-    //     },
-    //     "instruction": {
-    //         "name": recipe_instructions
-    //     },
-    // };
-//     console.log("TOJSON: "+prep_times_map.get(prep_time.toString()));
-//     return json;
-// }
-
-// function postToDB(json) {
-//
-//     console.log("postToDB");
-//
-//     fetch('http://localhost:8080/recipe_book/services/recipe_handler/recipes' {
-//         method: "POST", headers: {
-//             'Accept': 'application/json',
-//                 'Content-Type': 'application/json'
-//         },
-//         body: parseToJson();
-//     })
-// .then(response => response.json())
-//         .then(function (json) {
-//
-//
-//         }).catch(err => console.log(err))
-//     alert("Recipe added!");
-// }
