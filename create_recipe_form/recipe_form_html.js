@@ -7,6 +7,9 @@ function addRecipeForm(){
         '</button>\n' +
         '\n' +
         '\n' +
+        '<!--<div class="container mt-5">-->\n' +
+        '<!--    <div class="row d-flex justify-content-center align-items-center">-->\n' +
+        '<!--        <div class="col-md-6">-->\n' +
         '<form id="regForm">\n' +
         '    <div aria-hidden="true" aria-labelledby="staticBackdropLabel" class="modal fade" data-bs-backdrop="static"\n' +
         '         data-bs-keyboard="false"\n' +
