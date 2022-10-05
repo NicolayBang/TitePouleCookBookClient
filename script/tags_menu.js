@@ -1,6 +1,6 @@
 function getTagsFromDB() {
     tags_results = document.querySelector('#checkBoxItems');
-    fetch('http:192.168.0.120:8080/recipe_book/services/recipe_handler/tags', {
+    fetch('http:107.171.153.230:8080/recipe_book/services/recipe_handler/tags', {
         method: "GET", headers: {
             'Accept': 'application/json',
             'Connection': 'close'

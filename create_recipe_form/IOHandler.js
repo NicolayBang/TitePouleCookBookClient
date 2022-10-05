@@ -1,4 +1,4 @@
-const postUrl = 'http://localhost:8080/recipe_book/services/recipe_handler/recipes';
+const postUrl = 'http:107.171.153.230:8080/recipe_book/services/recipe_handler/recipes';
 
 /**
  * Generic function to get the value of a selected input field. Hanldes radio buttons, text fields, and text areas.
@@ -65,7 +65,7 @@ function queryDB(queryParam, querySelector, columnName, elementType, elementClas
 
     console.log("queryDB");
     var query_results = document.querySelector(querySelector);
-    fetch('https://tite-poule-recipe-book.herokuapp.com/recipe_book/services/recipe_handler' + queryParam, {
+    fetch('http:107.171.153.230:8080/recipe_book/services/recipe_handler' + queryParam, {
         method: "GET", headers: {
             'Accept': 'application/json',
             'Connection': 'close'
