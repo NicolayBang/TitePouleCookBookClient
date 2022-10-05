@@ -2,7 +2,7 @@ let cards = [];
 let i = 0;
 
 function getRecipeTagsFromDB(recipe_id) {
-    fetch('https://tite-poule-recipe-book.herokuapp.com/recipe_book/services/recipe_handler/tags/' + recipe_id, {
+    fetch('http:107.171.153.230:8080/recipe_book/services/recipe_handler/tags/' + recipe_id, {
         method: "GET", headers: {
             'Accept': 'application/json',
             'Connection': 'close'
@@ -31,7 +31,7 @@ function createTagItem(tag, recipe_id) {
 
 function getFeaturedRecipesFromDB() {
 
-    fetch('https://tite-poule-recipe-book.herokuapp.com/recipe_book/services/recipe_handler/recipes', {
+    fetch('http:107.171.153.230:8080/recipe_book/services/recipe_handler/recipes', {
         method: "GET", headers: {
             'Accept': 'application/json',
             'Connection': 'close',
@@ -60,7 +60,7 @@ function getRecipeFromDB(input) {
 
     console.log(input);
 
-    fetch('https://tite-poule-recipe-book.herokuapp.com/recipe_book/services/recipe_handler/recipes' + input, {
+    fetch('http:107.171.153.230:8080/recipe_book/services/recipe_handler/recipes' + input, {
         method: "GET", headers: {
             'Accept': 'application/json',
             'Connection': 'close'

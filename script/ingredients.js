@@ -1,5 +1,5 @@
 function getIngredientsFromDB(recipe_id) {
-    fetch('https://tite-poule-recipe-book.herokuapp.com/recipe_book/services/recipe_handler/ingredients/' + recipe_id, {
+    fetch('http:107.171.153.230:8080/recipe_book/services/recipe_handler/ingredients/' + recipe_id, {
         method: "GET", headers: {
             'Accept': 'application/json',
             'Connection': 'close'
@@ -7,8 +7,8 @@ function getIngredientsFromDB(recipe_id) {
     })
         .then(response => response.json())
         .then(function (json) {
-            const json_data = json['ingredients'][0];
-            const test = null;
+            // const json_data = json['ingredients'][0];
+            // const test = null;
 
             for (let i = 0; i < json['ingredients'].length; i++) {
 
