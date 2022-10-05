@@ -1,4 +1,4 @@
-const postUrl = 'http://localhost:8080/recipe_book/services/recipe_handler/recipes';
+const postUrl = 'https://tite-poule-recipe-book.herokuapp.com/recipe_book/services/recipe_handler/recipes';
 
 /**
  * Generic function to get the value of a selected input field. Hanldes radio buttons, text fields, and text areas.
