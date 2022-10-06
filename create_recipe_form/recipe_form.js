@@ -180,7 +180,7 @@ function parseToJson(){
         "difficulty_id": difficulty,
         "prep_time_id":prep_time_id,
         "description": description,
-        "tags": null,//["American", "Dessert"],
+        "tags": ["American", "Dessert"],
         "ingredients": [],
         "instructions": []
     };
