@@ -3,7 +3,7 @@ function addRecipeForm(){
     const recipeForm = document.querySelector('#recipe_form');
 
     div.innerHTML += '<button class="btn btn-primary" data-bs-target="#post_modal" data-bs-toggle="modal" type="button">\n' +
-        '    Post a new Recipe...\n' +
+        '    Create Recipe\n' +
         '</button>\n' +
         '\n' +
         '\n' +
