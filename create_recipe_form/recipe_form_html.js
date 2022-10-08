@@ -126,14 +126,6 @@ function addRecipeForm(){
         '                                                    <option>12</option>\n' +
         '                                                </select>\n' +
         '                                            </div>\n' +
-        '<div class="col-sm">\n' +
-        '    <form autocomplete="off" action="/action_page.php">\n' +
-        '        <div class="autocomplete" style="width:150px;">\n' +
-        '            <input id="tag_input" type="text" name="input_tag" placeholder="Tag...">\n' +
-        '        </div>\n' +
-        '        <button className="btn btn-primary" id="add_tag" type="button">Add Tag</button>\n' +
-        '    </form>\n' +
-        '</div>\n' +
         '                                            <label for="description_text">Description: </label>\n' +
         '                                            <textarea class="form-control" id="description_text" name="description"\n' +
         '                                                      placeholder="Write a short description of the recipe..."\n' +
@@ -145,6 +137,15 @@ function addRecipeForm(){
         '                                            }\n' +
         '                                                this.setSelectionRange(start, end);\n' +
         '                                                "></textarea>\n' +
+        '<hr><div class="col-sm">\n' +
+        '<button className="btn btn-primary" id="add_tag" type="button">Add Tag</button>\n' +
+        '    <form autocomplete="off" action="/action_page.php">\n' +
+        '        <div class="autocomplete" style="width:150px;">\n' +
+        '            <input id="tag_input" type="text" name="input_tag" placeholder="Tag...">\n' +
+        '        </div>\n' +
+        // '        <button className="btn btn-primary" id="add_tag" type="button">Add Tag</button>\n' +
+        '    </form>\n' +
+        '</div>\n' +
         '                                            <br><br>\n' +
         '                                        </div>\n' +
         '                                    </div>\n' +

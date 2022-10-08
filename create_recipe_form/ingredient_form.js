@@ -40,7 +40,7 @@ function addIngredientForm() {
         '                                            </button>\n' +
         '                                          \n' +
         '                                            <div class="dropdown-menu">\n' +
-        '                                                <div class="form-check">  <div id="unit-options'+ingredientNb+'"></div>'+
+        '                                                <div class="form-check"><div id="unit-options'+ingredientNb+'"></div>'+
         '                                                </div>\n' +
         '                                            </div>\n' +
         '                                        </div>\n' +
