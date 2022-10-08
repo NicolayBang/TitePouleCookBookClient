@@ -152,7 +152,6 @@ function addRecipeForm(){
         '                                </div>\n' +
         '                                <br>\n' +
         '                            </div>\n' +
-        ''
         '                            <!--                            <label for="ingredient_post">Ingredients </label>-->\n' +
         '                            <div class="tab" id="post_step_2">\n' +
         '                            </div>\n' +

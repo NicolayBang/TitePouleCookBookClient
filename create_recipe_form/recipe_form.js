@@ -24,8 +24,9 @@ var values = [];
 document.addEventListener("DOMContentLoaded", function (event) {
 
     addRecipeForm();
-   // addTagBtnOnClickListener();
     showTab(currentTab);
+    autocomplete(document.getElementById("tag_input"), tags_input);
+    addTagBtnOnClickListener();
 
 });
 
@@ -41,6 +42,7 @@ function showTab(n) {
    // x[n].style.display = "block";
     if (n == 0) {
         document.getElementById("prevBtn").style.display = "none";
+        var test=1;
     } else {
         document.getElementById("prevBtn").style.display = "inline";
     }
