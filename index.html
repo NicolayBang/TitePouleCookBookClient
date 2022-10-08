@@ -1,29 +1,18 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <script src="/script/main.js"></script>
-    <script src="/script/recipe_cards.js"></script>
-    <script src="/script/tags_menu.js"></script>
-    <script src="/script/search_buttons.js"></script>
-    <script src="/script/instructions.js"></script>
-    <script src="/script/ingredients.js"></script>
-    <script src="/create_recipe_form/recipe_form.js"></script>
-    <script src="/create_recipe_form/ingredient_form.js"></script>
-    <script src="/create_recipe_form/instruction_form.js"></script>
-    <script src="/create_recipe_form/IOHandler.js"></script>
-    <script src="/create_recipe_form/recipe_form_html.js"></script>
-    <script src="/create_recipe_form/tags_form.js"></script>
-<!--    https://titepoule.herokuapp.com-->
-<!--    https://titepoule.herokuapp.com-->
-<!--    https://titepoule.herokuapp.com-->
-<!--    https://titepoule.herokuapp.com-->
-<!--    https://titepoule.herokuapp.com-->
-<!--    https://titepoule.herokuapp.com-->
-<!--    https://titepoule.herokuapp.com-->
-<!--    https://titepoule.herokuapp.com-->
-<!--    https://titepoule.herokuapp.com-->
-<!--    https://titepoule.herokuapp.com-->
-<!--    https://titepoule.herokuapp.com-->
+    <script src="https://titepoule.herokuapp.com/script/main.js"></script>
+    <script src="https://titepoule.herokuapp.com/script/recipe_cards.js"></script>
+    <script src="https://titepoule.herokuapp.com/script/tags_menu.js"></script>
+    <script src="https://titepoule.herokuapp.com/script/search_buttons.js"></script>
+    <script src="https://titepoule.herokuapp.com/script/instructions.js"></script>
+    <script src="https://titepoule.herokuapp.com/script/ingredients.js"></script>
+    <script src="https://titepoule.herokuapp.com/create_recipe_form/recipe_form.js"></script>
+    <script src="https://titepoule.herokuapp.com/create_recipe_form/ingredient_form.js"></script>
+    <script src="https://titepoule.herokuapp.com/create_recipe_form/instruction_form.js"></script>
+    <script src="https://titepoule.herokuapp.com/create_recipe_form/IOHandler.js"></script>
+    <script src="https://titepoule.herokuapp.com/create_recipe_form/recipe_form_html.js"></script>
+    <script src="https://titepoule.herokuapp.com/create_recipe_form/tags_form.js"></script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -76,7 +65,7 @@
                                 <li class="list-group-item"> -An AI image generator microservice that will generate an
                                     image based on the title of the recipe.
                                 </li>
-                               <span style="font-size: xx-small"></span> <span style="font-style: italic" >*** This feature is currently available for testing purposes without login. Please use the "Create
+                                <span style="font-size: xx-small"></span> <span style="font-style: italic">*** This feature is currently available for testing purposes without login. Please use the "Create
                                     Recipe" button to create a recipe. You can then view it on the home page. Keep in mind added recipes will be deleted often.</span></span>
                             </ul>
                             <!--              </div>-->
@@ -132,12 +121,12 @@
 
 <body onload="init()">
 
-    <div class="input-group">
-        <input type="search" style ="margin-left: 34%" class="form-control rounded" placeholder="Search" aria-label="Search"
-               aria-describedby="search-addon" id="search_bar_input"/>
-        <button type="button" class="btn btn-outline-primary" id="search_by_name_btn">Search</button>
-        <div style="margin-left: 5%" id="recipe_form"></div>
-    </div>
+<div class="input-group">
+    <input type="search" style="margin-left: 34%" class="form-control rounded" placeholder="Search" aria-label="Search"
+           aria-describedby="search-addon" id="search_bar_input"/>
+    <button type="button" class="btn btn-outline-primary" id="search_by_name_btn">Search</button>
+    <div style="margin-left: 5%" id="recipe_form"></div>
+</div>
 
 
 <br><br>
@@ -187,19 +176,13 @@
         <div class="row my-row" id="results"></div>
     </div>
 </div>
-<div class="col-sm">
-    <form autocomplete="off" action="/action_page.php">
-        <div class="autocomplete" style="width:300px;">
-            <input id="input_tags" type="text" name="tags_input" placeholder="Tag...">
-        </div>
-        <button className="btn btn-primary" id="add_instruction" type="button">Add Tag</button>
-    </form>
-</div>
+
 </body>
 
 <footer>
-<!--    <div class="card fixed-bottom" id="bottom_page">-->
-        Tite Poule's Recipe Book
-<!--    </div>-->
+    <!--    z-index:1; and position: absolute;-->
+    <div class="card fixed-bottom" id="bottom_page">
+        <div> Tite Poule's Recipe Book made by <a href="http://www.nicolaybang.com">Nicolay Bang</a></div>
+    </div>
 </footer>
 </html>
