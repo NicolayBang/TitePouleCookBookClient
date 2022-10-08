@@ -94,6 +94,7 @@ select {
     margin-top: 15px;
 
 
+
 }
 
 #check_form {
@@ -102,4 +103,7 @@ select {
     padding: 5px;
     margin-top: 10px;
 
+}
+#bottom_page{
+height: 3%;
 }

@@ -16,7 +16,6 @@ function addRecipeForm(){
         '         id="post_modal" tabindex="-1">\n' +
         '        <div class="modal-dialog">\n' +
         '            <div class="modal-content">\n' +
-        '                <!--                        <form id="regForm">-->\n' +
         '                <div class="modal-header">\n' +
         '\n' +
         '                    <h5 class="modal-title" id="register">New Recipe</h5>\n' +
