@@ -1,3 +1,5 @@
+var tags=[];
+
 function getTagsFromDB() {
     tags_results = document.querySelector('#checkBoxItems');
     fetch('https://tite-poule-recipe-book.herokuapp.com/recipe_book/services/recipe_handler/tags', {
@@ -14,6 +16,7 @@ function getTagsFromDB() {
             for (let i = 0; i < json['tags'].length; i++) {
 
                 createCheckBoxItem(json['tags'][i]);
+                tags.push(json['tags'][i]);
 
             }
 
