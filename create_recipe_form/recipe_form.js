@@ -188,6 +188,7 @@ function parseToJson(){
         "instructions": []
     };
     for (let i = 0; i <= input_tag.length; i++) {
+        if(input_tag[i]===undefined){continue;}
        json.tags[i] = input_tag[i];
     }
 
