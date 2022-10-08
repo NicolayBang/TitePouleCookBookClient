@@ -1,4 +1,4 @@
-var tags=[];
+var tags_input=[];
 
 function getTagsFromDB() {
     tags_results = document.querySelector('#checkBoxItems');
@@ -16,7 +16,7 @@ function getTagsFromDB() {
             for (let i = 0; i < json['tags'].length; i++) {
 
                 createCheckBoxItem(json['tags'][i]);
-                tags.push(json['tags'][i]);
+                tags_input.push(json['tags'][i]);
 
             }
 

@@ -24,6 +24,7 @@ var values = [];
 document.addEventListener("DOMContentLoaded", function (event) {
 
     addRecipeForm();
+   // addTagBtnOnClickListener();
     showTab(currentTab);
 
 });
@@ -204,4 +205,3 @@ function parseToJson(){
     }
     return json;
 }
-
