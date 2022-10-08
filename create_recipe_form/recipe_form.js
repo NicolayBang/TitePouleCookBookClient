@@ -183,11 +183,17 @@ function parseToJson(){
         "difficulty_id": difficulty,
         "prep_time_id":prep_time_id,
         "description": description,
-        "tags": ["American", "Dessert"],
+        "tags": [],
         "ingredients": [],
         "instructions": []
     };
-    for (let i = 0; i <= ingredientNb; i++) {
+    for (let i = 0; i <= input_tag.length; i++) {
+       json.tags[i] = input_tag[i];
+    }
+
+//if(ingredientNb===0){ingredientNb=1;}
+
+    for (let i = 0; i <= recipe_ingredient.length; i++) {
         var ingredient = {
             "ingredient": {
                 "name": recipe_ingredient[i],
@@ -195,14 +201,18 @@ function parseToJson(){
                 "unit": unit[i]
             }
         };
+        if(ingredient.ingredient.name===undefined) {continue}
         json.ingredients.push(ingredient);
     }
-    for (let i = 0; i <= instructionNb; i++) {
+    //if(instructionNb===0){instructionNb=1;}
+    for (let i = 0; i <= recipe_instructions.length; i++) {
         var instruction = {
             "instruction": {
                 "name": recipe_instructions[i]
             }
         };
+        if (instruction.instruction.name === undefined) {continue;}
+
         json.instructions.push(instruction);
     }
     return json;
